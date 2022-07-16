@@ -1,0 +1,140 @@
+/* Start Global rules */
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --section-background: #ececec;
+  --main-transition: 300ms; 
+  --main-padding: 100px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Start containers */
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* medias of containers */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End containers */
+
+/* End Global rules */
+
+header .container {
+  display: flex;
+  align-items: center;
+}
+header .container > nav {
+  flex: 1;
+}
+header .logo a {
+  color: var(--main-color);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+nav.links ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+nav.links li {
+  padding: 1.25rem 1.5rem;
+}
+nav.links ul a{
+  font-size: 1.1rem;
+  color: black;
+}
+
+.mega-menu {
+  display: flex;
+  opacity: 0;
+  background-color: rgb(64, 64, 64);
+  position: absolute;
+  width: 96%;
+  min-height: 10px;
+  bottom: -460px;
+  left: 0;
+  margin: 0 1rem;
+  padding: 1rem;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.mega-menu:hover,
+a.other-links:hover +.mega-menu {
+  opacity: 1;
+  z-index: 1000;
+  bottom: -410px;
+}
+.mega-menu > nav {
+  flex: 1;
+}
+.mega-menu > * {
+  flex-basis: 50%;
+  padding: 1rem 0;
+}
+@media(max-width: 1200px) {
+  .mega-menu > .other-links {
+    flex-basis: 70%;
+  }
+}
+.mega-menu img {
+  width: 100%;
+}
+header .mega-menu ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 0 2rem;
+}
+header .mega-menu li {
+  border-bottom: 1px solid #fafafa;
+}
+header .mega-menu li,
+header .mega-menu a {
+  color: var(--main-color) !important;
+  font-weight: 700;
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+}
+header .mega-menu .left-side {
+  min-width: 198px;
+}
+
+.Test {
+  min-height: 100vh;
+}
