@@ -12,6 +12,7 @@
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
+  --text-color-alt: #777;
   --section-background: #ececec;
   --main-transition: 300ms; 
   --main-padding: 6.25rem;
@@ -49,7 +50,7 @@ img {
 .section-heading {
   position: relative;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   padding: 0 1.25rem;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -429,5 +430,50 @@ header .mega-menu a {
 /* Start article */
 .article {
   padding: var(--main-padding) 0;
+}
+.article .box {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #eee;
+  transition: var(--main-transition);
+}
+.article .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px 5px #eee;
+}
+.article .article-imgs img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.article .article-content {
+  border-bottom: 1px solid #e6e6e7;
+  padding: 0.75rem 1rem 1rem;
+}
+.article .article-content p {
+  color: var(--text-color-alt);
+  line-height: 1.4;
+}
+.article .article-link {
+  display: flex;
+  justify-content: space-between  ;
+  align-items: center;
+  color: var(--main-color);
+  padding: 1rem;
+}
+.article .article-link a {
+  cursor: pointer;
+  color: var(--main-color);
+  font-weight: 700;
+}
+.article .box:hover i {
+  animation: left-to-right 500ms linear infinite;
+}
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
 }
 /* End article */
