@@ -532,3 +532,97 @@ header .mega-menu a {
   transition: var(--main-transition);
 }
 /* End gallery */
+
+/* Start Features */
+.feature {
+  padding: var(--main-padding) 0;
+}
+.feature .box {
+  /* Variables clr are taken from Html */
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+.feature .box .image {
+  position: relative;
+  transition-duration: var(--main-transition);
+  overflow: hidden;
+  max-height: 342px;
+}
+.feature .box .image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr);
+  opacity: 0.5;
+}
+.feature .box .image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right:0 ; 
+  border-color: transparent transparent white transparent;
+  border-width: 140px 0 140px 450px;
+  border-style: solid;
+  transition: var(--main-transition);
+}
+.feature .box:hover .image::after {
+  border-width: 140px 450px 140px 0px;
+}
+.feature .box .content {
+  text-transform: capitalize;
+  padding: 1.5rem;
+}
+.feature .content h3 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: .5rem 0;
+  font-size: 2.5rem;
+}
+.feature .content h3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 70%;
+  height: 5px;
+  background-color: var(--clr);
+}
+.feature .content p {
+  color: var(--text-color-alt);
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+.feature a {
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--clr);
+  border: 4px solid var(--clr);
+  border-radius: 5px;
+  padding: .1rem 1.75rem;
+  margin-bottom: 2rem;
+  z-index: 2;
+  
+}
+.feature a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--clr);
+  transition: var(--main-transition);  
+  z-index: -1;
+}
+.feature .box:hover a {
+  color: white;
+}
+.feature .box:hover a::before {
+  width: 100%;
+}
+/* End Features */
