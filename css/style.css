@@ -662,3 +662,73 @@ header .mega-menu a {
   color: #ffc107;
 }
 /* End Testimonials */
+
+/* Start Team Members */
+.team-members .box {
+  position: relative;
+  padding: 5rem 0 1rem;
+}
+.team-members .box::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  z-index: -1;
+}
+.team-members .box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  transition-duration: var(--main-transition);
+  z-index: -1;
+}
+.team-members .box:hover::after {
+  width: 80%;
+}
+.team-members .content {
+  display: flex;
+  justify-content: space-between;
+}
+.team-members img {
+  border-radius: 10px;
+  transition-duration: var(--main-transition);
+}
+.team-members .box:hover img {
+  filter: grayscale(1);
+}
+.team-members .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+.team-members .links a {
+  color: #777;
+  cursor: pointer;
+}
+.team-members .links a:hover {
+  color: var(--main-color);
+}
+.team-members .person {
+  width: 75%;
+  margin-left: auto;
+}
+.team-members .person .member {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  transition-duration: var(--main-transition);
+}
+.team-members .box:hover .person .member {
+  color: #777;
+}
+/* End Team Members */
