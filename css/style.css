@@ -45,7 +45,9 @@ img {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem
 }
-
+.section-padding {
+  padding: var(--main-padding) 0;
+}
 /* Start Component { Sections heading } */
 .section-heading {
   position: relative;
@@ -429,9 +431,6 @@ header .mega-menu a {
 /* End landing */
 
 /* Start article */
-.article {
-  padding: var(--main-padding) 0;
-}
 .article .box {
   background-color: white;
   border-radius: 5px;
@@ -482,7 +481,6 @@ header .mega-menu a {
 /* stat gallery */
 .gallery {
   position: relative;
-  padding: var(--main-padding) 0;
 }
 .gallery::before {
   content: "";
@@ -534,9 +532,6 @@ header .mega-menu a {
 /* End gallery */
 
 /* Start Features */
-.feature {
-  padding: var(--main-padding) 0;
-}
 .feature .box {
   /* Variables clr are taken from Html */
   text-align: center;
@@ -626,3 +621,44 @@ header .mega-menu a {
   width: 100%;
 }
 /* End Features */
+
+/* Start Testimonials */
+.testimonials {
+  position: relative;
+}
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--section-background);
+  z-index: -1;
+}
+.testimonials .box {
+  position: relative;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+}
+.testimonials .image {
+  display: flex;
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  background-color: #ececec;
+  border-radius: 50%;
+  padding: 10px;
+}
+.testimonials .image img {
+  border-radius: 50%;
+  max-height: 80px;
+}
+.testimonials .role,
+.testimonials .para {
+  color: var(--text-color-alt);
+}
+.testimonials .rating i.filled {
+  color: #ffc107;
+}
+/* End Testimonials */
