@@ -48,6 +48,19 @@ img {
 .section-padding {
   padding: var(--main-padding) 0;
 }
+.flexable {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  }
+  .flexable > * {
+    flex-basis: 100%;
+  }
+  @media (min-width: 768px) {
+    .flexable > * {
+      flex-basis: calc(50% - 1rem);
+    }
+  }
 /* Start Component { Sections heading } */
 .section-heading {
   position: relative;
@@ -831,3 +844,48 @@ header .mega-menu a {
   margin-right: 1rem;
 }
 /* End Services */
+
+/* Start Skills */
+.skills .box {
+  margin-bottom: .5rem;
+}
+.skills .image {
+  flex-basis: calc(45% - 1rem);
+}
+.skills .data {
+  flex-basis: calc(55% - 1rem);
+}
+@media(max-width: 993px) {
+  .flexable > .data {
+    flex-basis: 100%;
+  }
+  .skills .image {
+    display: none;
+  }
+}
+.skills .box .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+.skills .content .percent::before {
+  content: attr(data-percent);
+  padding: 0 0.4rem;
+  font-size: .75rem;
+  font-weight: bold;
+  color: var(--main-color);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.skills .box .bar {
+  position: relative;
+  height: 30px;
+  background-color: #eee;
+}
+.skills .bar span {
+  position: absolute;
+  background-color: var(--main-color);
+  height: 100%;
+}
+/* End Skills */
