@@ -930,6 +930,7 @@ header .mega-menu a {
   height: 0;
   background-color: var(--section-background);
   transition-duration: var(--main-transition);
+  border-radius: 10px;
   z-index: -1;
 }
 .work .box:hover::before {
@@ -953,3 +954,9 @@ header .mega-menu a {
   padding-bottom: 1rem;
 }
 /* End work */
+
+/* Start Event */
+.event .container {
+  display: flex;
+}
+/* End Event */
