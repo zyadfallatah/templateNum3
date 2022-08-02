@@ -889,3 +889,67 @@ header .mega-menu a {
   height: 100%;
 }
 /* End Skills */
+
+/* Start work */
+.work {
+  position: relative;
+}
+.work::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--section-background);
+  z-index: -1;
+}
+.work .container.flexable {
+  gap: 1.25rem;
+  align-items: center;
+}
+.work .box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #f6f5f5;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 1rem 1.9rem;
+  margin: 1rem 0;
+  z-index: 2;
+}
+.work .box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: var(--section-background);
+  transition-duration: var(--main-transition);
+  z-index: -1;
+}
+.work .box:hover::before {
+  width: 100%;
+  height: 100%;
+}
+@media(max-width: 993px) {
+  .work .container.flexable {
+    flex-direction: column;
+  }
+}
+.work .work-image img {
+  max-height: 165px;
+}
+.work .text h3 {
+  font-size: 1.4rem;
+}
+.work .text p {
+  font-size: 1.1rem;
+  color: var(--text-color-alt);
+  padding-bottom: 1rem;
+}
+/* End work */
