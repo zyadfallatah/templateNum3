@@ -956,7 +956,124 @@ header .mega-menu a {
 /* End work */
 
 /* Start Event */
-.event .container {
+.event .flexable {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event .flexable > * {
+  flex-basis: 40%;
+}
+.event .flexable .content {
+  flex: 1;
+}
+@media(max-width: 993px) {
+  .event .flexable .image {
+    display: none;
+  }
+}
+.event .content {
+  text-align: center;
+}
+.event .count-container {
+  display: flex;
+  justify-content: center;
+}
+.event .count {
+  position: relative;
+  min-width: 75px;
+  min-height: 100px;
+  margin: 0 .25rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  transition-duration: var(--main-transition);
+}
+.event .count:hover {
+  border: 1px solid var(--main-color);
+}
+.event .count .number {
+  color: var(--main-color);
+  font-size: 2.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid #d4d4d4;
+  transition: var(--main-transition);
+}
+.event .count:hover .number {
+  border-bottom: 1px solid var(--main-color);
+}
+.event .count .timeline {
+  text-transform: capitalize;
+  padding-top: 0.25rem;
+  font-size: .75rem;
+}
+.event .text h3 {
+  font-size: 1.9rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.event .text p {
+  font-size: 1.2rem;
+  color: var(--text-color-alt);
+  line-height: 1.5;
+}
+.event .sub {
+  position: relative;
+  width: fit-content;
+  margin: 5rem auto 0;
+  background-color: #f6f5f5;
+  padding: 1.5rem 2rem;
+  border-radius: 40px;
+}
+.event .sub .email {
+  padding: 1.25rem;
+  border-radius: inherit;
+  border: 0;
+  min-width: 375px;
+  margin-right: 1rem;
+}
+.event .sub .email:focus {
+  outline: 0;
+  caret-color: var(--main-color);
+}
+.event .sub .email::placeholder {
+  text-transform: capitalize;
+  font-family: 'Cairo', sans-serif;;
+  font-size: 1rem;
+  transition-duration: var(--main-transition);
+}
+.event .sub .email:focus::placeholder {
+  opacity: 0;
+}
+.event .sub .sub-btn {
+  font-family: "open sans";
+  padding: 1rem;
+  border: 0;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: inherit;
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition-duration: var(--main-transition);
+}
+.event .sub .sub-btn:hover {
+  background-color: var(--main-color-alt);
+  cursor: pointer;
+}
+@media(max-width: 767px) {
+  .event .sub {
+    width: 100%;
+    border-radius: 0;
+    margin: 5rem 0;
+  }
+  .event .sub .email,
+  .event .sub .sub-btn{
+    min-width: 100%;
+    width: 100%;
+    border-radius: inherit;
+  }
+  .event .sub .sub-btn {
+    margin-top: 1rem;
+  }
 }
 /* End Event */
