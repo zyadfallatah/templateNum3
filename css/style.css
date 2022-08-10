@@ -1263,3 +1263,73 @@ header .mega-menu a {
   margin-top: 1rem;
 }
 /* End video */
+
+/* Start Stats */
+.stats {
+  position: relative;
+  min-height: 35vh;
+  background-image: url("../imgs/stats.jpg");
+  background-size: cover;
+  z-index: 1;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 95%);
+  z-index: -1;
+}
+.stats .container {
+  padding: 1rem;
+}
+.stats h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+.stats .data {
+  margin: 3rem 0 5rem ;
+}
+.stats .data.grid-4 {
+  gap: 1rem;
+}
+.stats .box {
+  position: relative;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  background-color: white;
+}
+.stats .box::before,
+.stats .box::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--main-color);
+  transition-duration: 600ms;
+}
+.stats .box:hover::before,
+.stats .box:hover::after {
+  height: 100%;
+}
+.stats .box::before {
+  bottom: 0;
+  left: 0;
+}
+.stats .box::after {
+  top: 0;
+  right: 0;
+}
+.stats .box span {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.stats .box h3 {
+  color: var(--main-color);
+  font-size: 1.25rem;
+  font-style: italic;
+}
+/* End Stats */
