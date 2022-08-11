@@ -1546,7 +1546,6 @@ footer .box-nav a::after {
 }
 footer .box-contact .content {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   color: #b9b9b9;
