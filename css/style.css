@@ -142,6 +142,36 @@ img {
     right: 0;
   }
 }
+.spike {
+  position: relative;
+}
+.spike::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+.dot {
+  display: none;
+}
+@media(min-width: 767px) {
+  .dot {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  .dot-left {
+    top: 70%;
+  }
+  .dot-right {
+    right: 0;
+    top: 20%;
+  }
+}
 /* End Component { Sections heading } */
 
 /* Start containers */
@@ -963,6 +993,9 @@ header .mega-menu a {
 /* End work */
 
 /* Start Event */
+.event {
+  position: relative;
+}
 .event .flexable {
   display: flex;
   justify-content: center;
