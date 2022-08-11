@@ -1454,6 +1454,7 @@ header .mega-menu a {
 .discount .right-side input:last-child {
   font-family: "open sans";
   color: white;
+  padding: .5rem 1rem;
   font-size: 1.25rem;
   font-weight: bold;
   background-color: var(--main-color);
